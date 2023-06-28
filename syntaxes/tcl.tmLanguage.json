@@ -1,0 +1,70 @@
+{
+	"scopeName": "source.tcl",
+	"fileTypes": ["tcl"],
+	"patterns": [
+	  {
+		"include": "#strings"
+	  },
+	  {
+		"include": "#comments"
+	  },
+	  {
+		"include": "#variables"
+	  },
+	  {
+		"include": "#keywords"
+	  }
+	],
+	"repository": {
+	  "comments": {
+		"patterns": [
+		  {
+			"name": "comment.line.tcl",
+			"match": "(#).*$",
+			"captures": {
+			  "1": { "name": "punctuation.definition.comment.tcl" }
+			},
+			"comment": "Line comments"
+		  }
+		]
+	  },
+	  "strings": {
+		"patterns": [
+		  {
+			"name": "string.quoted.double.tcl",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+			  {
+				"name": "constant.character.escape.tcl",
+				"match": "\\\\(?:[\"$]|\\[\\\"nrt\\])"
+			  }
+			]
+		  }
+		]
+	  },
+	  "variables": {
+		"patterns": [
+		  {
+			"name": "variable.other.tcl",
+			"match": "(\\$)\\w+"
+		  }
+		]
+	  },
+	  "keywords": {
+		"patterns": [
+		  {
+			"name": "keyword.control.tcl",
+			"match": "\\b(if|else|while|for|foreach|switch|proc)\\b"
+		  },
+		  {
+			"name": "keyword.other.tcl",
+			"match": "\\b(set|puts|incr|expr)\\b"
+		  }
+		]
+	  }
+	},
+	"uuid": "00000000-0000-0000-0000-000000000000",
+	"name": "TCL Language"
+  }
+  
