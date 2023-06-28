@@ -9,7 +9,7 @@ sudo apt install nodejs
 ```
 
 ```shell
-sudo apt install nodejs
+sudo npm install -g ts-node vsce
 ```
 
 ## How to build
